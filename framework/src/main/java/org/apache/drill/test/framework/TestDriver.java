@@ -272,8 +272,10 @@ public class TestDriver {
       new File(drillOutputDirName).mkdir();
     }
 
-    String templatePath = CWD
-        + "/src/main/resources/plugin-templates/";
+    //String templatePath = CWD
+      //  + "/src/main/resources/plugin-templates/";
+    String templatePath = getClass().getResource("/plugin-templates/").getPath();
+    LOG.info("Template Path : " + templatePath); 
     File[] templateFiles = new File(templatePath).listFiles();
     for (File templateFile : templateFiles) {
       String filename = templateFile.getName();
@@ -324,7 +326,7 @@ public class TestDriver {
           @Override
           public void run() {
             try {
-              Path src = new Path(CWD + "/resources", datasource.src);
+              Path src = new Path(CWD + "/" + Utils.getDrillTestProperties().get("DRILL_TEST_DATA_DIR"), datasource.src);
               Path dest = new Path(drillTestData, datasource.dest);
               hdfsCopy(src, dest, false, fsMode);
             } catch (IOException e) {
