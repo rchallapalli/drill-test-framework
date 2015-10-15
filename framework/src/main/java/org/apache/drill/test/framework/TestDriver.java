@@ -377,8 +377,7 @@ public class TestDriver {
 
   private static void runGenerateScript(DataSource datasource) {
     int exitCode = 0;
-    String command = CWD + "/resources/" + datasource.src;
-    LOG.info("Running command " + command);
+    String command = CWD + "/" + Utils.getDrillTestProperties().get("DRILL_TEST_DATA_DIR") + "/" + datasource.src;
     StringBuilder sb = new StringBuilder();
     try {
 
