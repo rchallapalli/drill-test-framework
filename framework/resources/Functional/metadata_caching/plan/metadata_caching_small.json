@@ -24,6 +24,11 @@
         },
         {
            "mode": "gen",
+           "src": "Datasources/metadata_caching/change_owner.sh",
+           "dest": ""
+        },
+        {
+           "mode": "gen",
            "src": "Datasources/metadata_caching/delete_cache.sh /drill/testdata/metadata_caching/nation",
            "dest": ""
         },
