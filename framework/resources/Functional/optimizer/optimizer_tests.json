@@ -1,0 +1,20 @@
+{
+    "testId": "optimizer-tests",
+    "type": "group",
+    "description": "Test p1tests function queries via jdbc",
+    "categories": [
+        "smoke"
+    ],
+    "matrices": [
+        {
+            "query-file": ".*.q",
+            "schema": "dfs",
+            "output-format": "tsv",
+            "expected-file": ".*.e",
+            "verification-type": [
+                "regex"
+            ]
+        }
+    ],
+    "datasources": []
+}
