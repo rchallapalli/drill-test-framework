@@ -1,0 +1,20 @@
+{
+    "testId": "subqueries_scalar_aggregate",
+    "type": "group",
+    "description": "scalar aggregate subqueries",
+    "categories": [ "smoke" ],
+    "matrices": [
+        {
+            "query-file": ".*.q",
+            "schema": "dfs",
+            "output-format": "tsv",
+            "expected-file": ".*.e",
+            "verification-type": [
+                "regex"
+            ]
+        }
+    ],
+    "datasources": [
+          ]
+}
+
