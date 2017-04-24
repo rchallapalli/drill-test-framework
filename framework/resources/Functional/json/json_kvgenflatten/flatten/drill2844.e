@@ -1,0 +1,10 @@
+store	{"a":"foo1"}
+store	{"b":"boo"}
+web	{"a":"foo"}
+web	{"b":"boo"}
+store	{"a":"bar"}
+store	{"c":-1}
+store	{"d":4.5}
+web	{"a":"bar"}
+web	{"c":1}
+web	{"d":4.5}
